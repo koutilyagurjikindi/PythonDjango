@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome!</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}
+Welcome
+{% endblock %}
+{% block content %}
     <h1>Welcome to the Meeting Planner!</h1>
     <p>This is demo application for the course
     <em>Django: Getting started</em> on <a href="http://www.google.com">Google Inc</a>
@@ -15,5 +13,4 @@
                 <li><a href="{% url 'detail' i.id %}">{{i.title}}</a></li>
             {% endfor %}
         </ul>
-</body>
-</html>
+{% endblock %}

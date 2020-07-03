@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+Rooms
+{% endblock %}
+{% block content %}
+    <h1>Rooms</h1>
+    <ul>
+        {% for i in rooms %}
+            <li>
+                <p>{{i.name}} is in {{i.floor}} floor {{i.room_number}} room number</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
